@@ -36,6 +36,7 @@
     },
     "scripts": {
         "post-root-package-install": [
+            "./vendor/bin/generate-cache",
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
@@ -48,6 +49,7 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "./vendor/bin/generate-cache",
             "php artisan optimize"
         ]
     },
