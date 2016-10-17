@@ -17,8 +17,7 @@ cp ../gitlab.ci.yml gitlab.ci.yml
 cp ../composer.json composer.json
 cp ../run.sh init.sh
 
-mkdir overwrite
-cp ../app.php overwrite/app.php
+cp ../app.php app.php
 
 composer install
 

@@ -4,7 +4,7 @@
 composer install
 
 # overwrite
-cp overwrite/app.php config/app.php
+cp app.php config/app.php
 
 php artisan vendor:publish --provider="Lingxi\Hashids\HashidsServiceProvider"
 php artisan vendor:publish --provider="Lingxi\BrowserDetect\BrowserDetectServiceProvide"
@@ -15,6 +15,6 @@ php artisan vendor:publish --provider="Prettus\Repository\Providers\RepositorySe
 php artisan key:generate
 
 # remove
-rm -rf overwrite
+rm app.php
 rm init.sh
 
