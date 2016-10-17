@@ -1,7 +1,7 @@
-kernel.php
-app.php
-shipit.sh
-after_shipit.sh
-gitlab.ci.yml
-composer.json
+/kernel.php
+/app.php
+/composer.json
+/shipit.sh
+/after_shipit.sh
+/gitlab.ci.yml
 

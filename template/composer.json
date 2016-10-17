@@ -1,0 +1,96 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/framework": "5.3.*",
+        "lingxi/api-authentication": "1.0.*",
+        "lingxi/hashids": "^0.0.9",
+        "lingxi/new-cookie": "^0.0.7",
+        "lingxi/options-manager": "^1.0.2",
+        "lingxi/browser-detect": "*",
+        "prettus/l5-repository": "^2.5"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.0",
+        "symfony/css-selector": "3.1.*",
+        "symfony/dom-crawler": "3.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "./vendor/bin/generate-cache",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        },
+        {"packagist": false},
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:/third/weixin_api.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:/package/pay-api.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:/package/utils.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@git.lxi.me:tool/api-authentication.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:package/lingxi-upload.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:package/browser-detect.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:package/options-manager.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@git.lxi.me:package/laravel-hashids.git"
+        }
+    ]
+}
