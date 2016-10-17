@@ -15,6 +15,10 @@ cp ../shipit.sh shipit.sh
 cp ../after_shipit.sh after_shipit.sh
 cp ../gitlab.ci.yml gitlab.ci.yml
 cp ../composer.json composer.json
+cp ../run.sh init.sh
+
+mkdir overwrite
+cp ../app.php overwrite/app.php
 
 composer install
 
@@ -27,6 +31,7 @@ composer install
 #php artisan vendor:publish --provider="Lingxi\Cookie\CookieServiceProvider"
 
 rm -rf vendor
+rm composer.lock
 
 echo "test.php" >> .gitignore
 
