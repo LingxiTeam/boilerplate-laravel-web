@@ -5,6 +5,7 @@ composer install
 
 # overwrite
 cp app.php config/app.php
+cp .env.example .env
 
 php artisan vendor:publish --provider="Lingxi\Hashids\HashidsServiceProvider"
 php artisan vendor:publish --provider="Lingxi\BrowserDetect\BrowserDetectServiceProvide"
