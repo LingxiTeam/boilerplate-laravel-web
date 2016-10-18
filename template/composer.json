@@ -11,7 +11,7 @@
         "lingxi/hashids": "^0.0.9",
         "lingxi/new-cookie": "^0.0.7",
         "lingxi/options-manager": "^1.0.2",
-        "lingxi/browser-detect": "*",
+        "lingxi/browser-detect": "1.0.*",
         "prettus/l5-repository": "^2.5"
     },
     "require-dev": {
